@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rm.mapper.UsersMapper" >
+
+    <insert id="insertUser" parameterType="com.rm.pojo.Users">
+        insert into users(username,password,sex,age,birth) values(#{username},#{password},#{sex},#{age},#{birth})
+    </insert>
+
+    <select id="selectUserAll" resultType="com.rm.pojo.Users">
+        select * from users
+    </select>
+</mapper>
